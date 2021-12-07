@@ -1,0 +1,18 @@
+## Control Room
+## Poes
+
+
+# SET NVM Global
+
+# React Native
+nvm install 15 && nvm alias default 15 
+gem install ffi ## Because of M1
+Make lauchPackager.command run through iTerm instead of default Term
+
+# Set chrome as default browser
+# Java asking for folder access when sdkmanager is called!important
+# Xcode needs to be open once before `open -a Simulator`!important
+# Acessar instancia via SSH && Testar codificação através VSCode com SSH!important
+# Testar tunelamento de tela do Simulador!important
+# Setup ARM Android emulator!important
+# REmove comentarios do Android SDK
