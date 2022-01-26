@@ -11,7 +11,7 @@ Keep in mind It is tailored for App2sales.com.br needs.
 > You will need to type the administrator password one time when the script starts, as some installations requires sudo.
 
 ----
-## List of all software instaled
+## List of all software installed
 
 ### Basic:
 | Name | Link |Description |
