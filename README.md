@@ -6,7 +6,7 @@ Keep in mind It is tailored for App2sales.com.br needs.
 
 **To install the development enviroment on your macOS, run the following command on your terminal:**
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/App2Sales/macos-developer-terra-form/feature/v1/download_and_run.sh)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/App2Sales/macos-developer-terra-form/master/download_and_run.sh)"`
 
 > You will need to type the administrator password one time when the script starts, as some installations requires sudo.
 
