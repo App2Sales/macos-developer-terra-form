@@ -1,5 +1,5 @@
 tap "dart-lang/dart"
 tap "leoafarias/fvm"
-brew "cocoapds"
+brew "cocoapods"
 brew "dart"
 brew "fvm"
