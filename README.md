@@ -8,6 +8,8 @@ Keep in mind It is tailored for App2sales.com.br needs.
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/App2Sales/macos-developer-terra-form/master/download_and_run.sh)"`
 
+**Attention**: if Xcode license is not accepted, please, run `sudo xcodebuild -license accept`, before runing the above command.
+
 > You will need to type the administrator password one time when the script starts, as some installations requires sudo.
 
 ----
