@@ -1,0 +1,26 @@
+#!/bin/bash
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# RUBY
+export PATH="/bin:/Users/samuelbezerrab/.nvm/versions/node/v14.19.3/bin:/opt/homebrew/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/samuelbezerrab/.pub-cache/bin:/Users/samuelbezerrab/fvm/default/bin:/Users/samuelbezerrab/webos_sdk/CLI/bin"
+
+# FVM
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":$HOME/fvm/default/bin
+
+# ANDROID NDK
+export ANDROID_NDK_HOME="/android-ndk"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+

@@ -52,6 +52,8 @@ dockutil --add  "/Applications/iTerm.app"
 dockutil --add  "/Applications/Fork.app"
 dockutil --add  "/Applications/Postman.app"
 
+# TODO: Change wallpaper to color
+
 # Config Android SDK
 # yes | sdkmanager "platforms;android-29" "system-images;android-29;default;x86_64" "system-images;android-29;google_apis;x86"
 # yes | sdkmanager "cmdline-tools;latest" "build-tools;29.0.2"
@@ -66,11 +68,8 @@ sh react-native/install.sh
 # Install Oh My ZShell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm ~/.zshrc
-if [[ $(uname -m) == 'arm64' ]]; then
-	cp ./zsh/zshrc ~/.zshrc
-else
-  cp ./zsh/apple-silicon-zshrc ~/.zshrc
-fi
+sh ./zsh/generate-zsh.sh
+cp ./zsh/zsh-file ~/.zshrc
 source ~/.zshrc
 
 # END
