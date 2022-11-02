@@ -47,12 +47,10 @@ dockutil --add  "/Applications/Postman.app"
 # yes | sdkmanager --licenses
 
 # Install and Config Flutter
-chmod +x flutter/install.sh
-./flutter/install.sh
+sh flutter/install.sh
 
 # Install and Config React Native
-chmod +x react-native/install.sh
-./react-native/install.sh
+sh react-native/install.sh
 
 # Install Oh My ZShell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
