@@ -1,9 +1,19 @@
 #!/bin/bash
+#### PRE CONFIG ####
+if [[ $(uname -m) == 'arm64' ]]; then
+	IS_M1=true
+else
+  IS_M1=false
+fi
+#### PRE CONFIG - END ####
+
 sudo -v # Request sudo upfront
 sudo sh -c 'echo "\nDefaults timestamp_timeout=-1">>/etc/sudoers' # Unlimit sudo time
 
 # Enable Rosetta 2 (x86 emulator)
-yes A | softwareupdate --install-rosetta
+if $IS_M1; then
+	yes A | softwareupdate --install-rosetta
+fi
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null \
