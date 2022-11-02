@@ -26,6 +26,7 @@ brew install mas # mas is not being used right now
 
 # Install Xcode and Command Line Tools
 # mas install 497799835 # Install Xcode ## Maybe switch to `xcodes`
+sudo xcode-select --switch /Applications/Xcode.app/
 sudo xcodebuild -license accept
 # xcode-select --install
 
@@ -65,7 +66,11 @@ sh react-native/install.sh
 # Install Oh My ZShell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 rm ~/.zshrc
-cp ./zsh/.zshrc ~/.zshrc
+if [[ $(uname -m) == 'arm64' ]]; then
+	cp ./zsh/zshrc ~/.zshrc
+else
+  cp ./zsh/apple-silicon-zshrc ~/.zshrc
+fi
 source ~/.zshrc
 
 # END
