@@ -48,7 +48,6 @@ brew bundle --file=./Brewfile
 # Config Dock to show the developer the avaliable UI apps
 dockutil --remove all
 dockutil --add  "/System/Applications/Launchpad.app"
-dockutil --add  "/Applications/Discord.app"
 dockutil --add  "/Applications/Google Chrome.app"
 dockutil --add  "/Applications/Visual Studio Code.app"
 dockutil --add  "/Applications/Xcode.app"
