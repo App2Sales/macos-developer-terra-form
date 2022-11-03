@@ -16,10 +16,15 @@ if $IS_M1; then
 fi
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null \
-&& echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile \
-&& eval "$(/opt/homebrew/bin/brew shellenv)" \
-&& source ~/.zprofile
+if $IS_M1; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null \
+	&& echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile \
+	&& eval "$(/opt/homebrew/bin/brew shellenv)" \
+	&& source ~/.zprofile
+else
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null \
+	&& source ~/.zshrc
+fi
 
 # Install Mac App Store for command line
 brew install mas # mas is not being used right now
