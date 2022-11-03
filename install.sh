@@ -56,7 +56,12 @@ dockutil --add  "/Applications/iTerm.app"
 dockutil --add  "/Applications/Fork.app"
 dockutil --add  "/Applications/Postman.app"
 
-# TODO: Change wallpaper to color
+# Change wallpaper to solid color
+hexCode="5e5ba3" # purple color
+bmpBytes="\x42\x4D\x44\x00\x00\x00\x00\x00\x00\x00\x3E\x00\x00\x00\x28\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x01\x00\x00\x00\x00\x00\x06\x00\x00\x00\x12\x0B\x00\x00\x12\x0B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x${hexCode:4:2}\x${hexCode:2:2}\x${hexCode:0:2}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+targetTempFile=$(mktemp)
+echo -n -e "$bmpBytes" > "$targetTempFile"
+m wallpaper $targetTempFile
 
 # Config Android SDK
 # yes | sdkmanager "platforms;android-29" "system-images;android-29;default;x86_64" "system-images;android-29;google_apis;x86"
