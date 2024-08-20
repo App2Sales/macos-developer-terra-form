@@ -1,5 +1,5 @@
 #!/bin/bash
-FLUTTER_VERSION=3.22.2
+FLUTTER_VERSION=3.22.1
 
 # Install Brew Deps
 brew bundle --file=./flutter/Brewfile
